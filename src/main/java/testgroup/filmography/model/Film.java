@@ -1,5 +1,7 @@
 package testgroup.filmography.model;
 
+import java.util.StringJoiner;
+
 public class Film {
     private int id;
     private String title;
@@ -45,5 +47,10 @@ public class Film {
 
     public void setWatched(boolean watched) {
         this.watched = watched;
+    }
+
+    @Override
+    public String toString() {
+        return id + " " + title + " " + year + " " + genre + " " + watched;
     }
 }
