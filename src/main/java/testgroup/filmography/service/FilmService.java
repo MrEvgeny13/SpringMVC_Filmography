@@ -5,7 +5,7 @@ import testgroup.filmography.model.Film;
 import java.util.List;
 
 public interface FilmService {
-    List<Film> allFilms();
+    List<Film> allFilms(int page);
 
     void add(Film film);
 
@@ -14,4 +14,8 @@ public interface FilmService {
     void edit(Film film);
 
     Film getById(int id);
+
+    int filmsCount();
+
+    boolean checkTitle(String title);
 }

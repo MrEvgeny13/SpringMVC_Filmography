@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class FilmServiceImpl implements FilmService {
+
     private FilmDAO filmDAO;
 
     @Autowired
@@ -19,8 +20,8 @@ public class FilmServiceImpl implements FilmService {
 
     @Override
     @Transactional
-    public List<Film> allFilms() {
-        return filmDAO.allFilms();
+    public List<Film> allFilms(int page) {
+        return filmDAO.allFilms(page);
     }
 
     @Override
@@ -45,5 +46,17 @@ public class FilmServiceImpl implements FilmService {
     @Transactional
     public Film getById(int id) {
         return filmDAO.getById(id);
+    }
+
+    @Override
+    @Transactional
+    public int filmsCount() {
+        return filmDAO.filmsCount();
+    }
+
+    @Override
+    @Transactional
+    public boolean checkTitle(String title) {
+        return filmDAO.checkTitle(title);
     }
 }
