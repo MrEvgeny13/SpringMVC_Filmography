@@ -1,2 +1,2 @@
 # SpringMVC_Filmography
-Simple CRUD app using Spring MVC, Hibernate, MySQL
+A sample CRUD app using Spring, Hibernate, MySQL
